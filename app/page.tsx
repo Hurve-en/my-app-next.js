@@ -3,40 +3,38 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <nav className="nav">
-        <div>
-          <p>Hurveen</p>
-        </div>
-
+      <header className="nav">
+        <p>Hurve-en</p>
         <div className="links">
           <a href="/personal">Personal</a>
           <a href="/business">Business</a>
           <a href="/partner">Partner</a>
           <a href="/about">About Us</a>
         </div>
+        <button className="signInBtn">Sign In</button>
+      </header>
 
-        <div>
-          <button className="signInBtn">Sign In</button>
-        </div>
-      </nav>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          paddingRight: "1.8rem",
-          marginTop: "2rem",
-        }}
-      >
-        <Image src="/profiles.jpeg" alt="" width={200} height={300} />
-      </div>
-
-      <div>
-        <h1 className="heroTitle">
-          SOFTWARE <br />
-          ENGINEER
-        </h1>
-      </div>
+      <main>
+        <section className="heroSection">
+          <h1 className="heroTitle">
+            SOFTWARE <br />
+            ENGINEER
+          </h1>
+          <div className="heroAside">
+            <Image
+              className="heroPhoto"
+              src="/profiles.jpeg"
+              alt="Portrait of Hurveen"
+              width={340}
+              height={420}
+              priority
+            />
+            <p className="heroBlurb">
+              Hi, Im Hurve-en, a Junior Software Engineer.
+            </p>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
